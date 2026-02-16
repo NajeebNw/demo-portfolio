@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="title">TodoInput</h1>
+
+  <div class="container">
+    <div class="todo-input-card">
+      <div class="input-row">
+        <span class="input-icon">📝</span>
+        <input id="todoText" type="text" placeholder="New Todo" />
+      </div>
+
+      <button id="addBtn" class="btn primary">Add new task</button>
+      <p class="hint">Tip: Press Enter to add.</p>
+    </div>
+
+    <h2 class="subtitle">Todo List</h2>
+
+    <div class="filters">
+      <button class="btn filter active" data-filter="all">All</button>
+      <button class="btn filter" data-filter="done">Done</button>
+      <button class="btn filter" data-filter="todo">Todo</button>
+    </div>
+
+    <div id="list" class="list"></div>
+
+    <div class="danger-row">
+      <button id="deleteDoneBtn" class="btn danger">Delete Done Tasks</button>
+      <button id="deleteAllBtn" class="btn danger">Delete All Tasks</button>
+    </div>
+  </div>
+
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h3>Edit Task</h3>
+      <input id="editInput" type="text" />
+      <div class="modal-actions">
+        <button id="saveEditBtn" class="btn primary">Save</button>
+        <button id="cancelEditBtn" class="btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
